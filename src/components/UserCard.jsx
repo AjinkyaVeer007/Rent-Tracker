@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function UserCard() {
+  const navigate = useNavigate();
   return (
-    <div className="border p-2 m-1 rounded-2 userCardGradient">
+    <div
+      onClick={() => navigate("/main/123")}
+      className="border p-2 m-1 rounded-2 userCardGradient"
+    >
       <div className="fw-medium fs-6 text-truncate">Rushikesh</div>
       <div className="row">
         <div className="col-6 text-center">

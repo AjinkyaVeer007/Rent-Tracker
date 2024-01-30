@@ -42,3 +42,36 @@ body{
   top: 50%;
   transform: translateY(-50%);
 }
+
+.customDivider {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.customDivider > span {
+  height: 1px;
+  width: 100%;
+  background-color: #dee2e6;
+  position: relative;
+}
+
+.customDivider > span::before,
+.customDivider > span::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  background-color: #d6d6d6;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.customDivider > span::before {
+  left: 0;
+}
+
+.customDivider > span::after {
+  right: 0;
+}

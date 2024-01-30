@@ -20,7 +20,7 @@ function Sidebar({ show, handleClose }) {
       id: 2,
       name: "Property",
       icon: <BsBuildingsFill size={"20px"} />,
-      navigate: "/main/property",
+      navigate: "/main/property/form",
     },
     {
       id: 3,

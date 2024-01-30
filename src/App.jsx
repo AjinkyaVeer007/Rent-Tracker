@@ -6,6 +6,9 @@ import Dashboard from "./herosections/Dashboard";
 import Property from "./herosections/Property";
 import Users from "./herosections/Users";
 import UserOnRent from "./herosections/UserOnRent";
+import RentDetails from "./herosections/RentDetails";
+import PropertyForm from "./herosections/PropertyForm";
+import PropertyList from "./herosections/PropertyList";
 
 function App() {
   const route = createBrowserRouter([
@@ -28,6 +31,16 @@ function App() {
         {
           path: "property",
           element: <Property />,
+          children: [
+            {
+              path: "form",
+              element: <PropertyForm />,
+            },
+            {
+              path: "list",
+              element: <PropertyList />,
+            },
+          ],
         },
         {
           path: "users",
@@ -36,6 +49,10 @@ function App() {
         {
           path: "useronrent",
           element: <UserOnRent />,
+        },
+        {
+          path: ":tenantId",
+          element: <RentDetails />,
         },
       ],
     },
