@@ -4,7 +4,7 @@ import UserCard from "../components/UserCard";
 
 function Dashboard() {
   return (
-    <div className="mx-3 overflow-auto">
+    <div className="mx-3">
       <IncomeCard />
       <div className="row g-0 mt-3 mb-5">
         <div className="col-6">
