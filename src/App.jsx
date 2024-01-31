@@ -4,11 +4,15 @@ import Register from "./pages/Register";
 import Layout from "./layout/Layout";
 import Dashboard from "./herosections/Dashboard";
 import Property from "./herosections/Property";
-import Users from "./herosections/Users";
-import UserOnRent from "./herosections/UserOnRent";
+import Tenant from "./herosections/Tenant";
 import RentDetails from "./herosections/RentDetails";
 import PropertyForm from "./herosections/PropertyForm";
 import PropertyList from "./herosections/PropertyList";
+import TenantForm from "./herosections/TenantForm";
+import TenantList from "./herosections/TenantList";
+import TenantRent from "./herosections/TenantRent";
+import TenantRentForm from "./herosections/TenantRentForm";
+import TenantRentList from "./herosections/TenantRentList";
 
 function App() {
   const route = createBrowserRouter([
@@ -43,12 +47,32 @@ function App() {
           ],
         },
         {
-          path: "users",
-          element: <Users />,
+          path: "tenant",
+          element: <Tenant />,
+          children: [
+            {
+              path: "form",
+              element: <TenantForm />,
+            },
+            {
+              path: "list",
+              element: <TenantList />,
+            },
+          ],
         },
         {
-          path: "useronrent",
-          element: <UserOnRent />,
+          path: "tenantrent",
+          element: <TenantRent />,
+          children: [
+            {
+              path: "form",
+              element: <TenantRentForm />,
+            },
+            {
+              path: "list",
+              element: <TenantRentList />,
+            },
+          ],
         },
         {
           path: ":tenantId",

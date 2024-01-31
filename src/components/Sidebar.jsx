@@ -26,13 +26,13 @@ function Sidebar({ show, handleClose }) {
       id: 3,
       name: "Rental Users",
       icon: <HiMiniUsers size={"20px"} />,
-      navigate: "/main/users",
+      navigate: "/main/tenant/form",
     },
     {
       id: 4,
       name: "Link users to property",
       icon: <FaLink size={"20px"} />,
-      navigate: "/main/useronrent",
+      navigate: "/main/tenantrent/form",
     },
   ];
 

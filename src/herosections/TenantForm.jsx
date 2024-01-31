@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 
-function Users() {
+function TenantForm() {
   return (
-    <div className="mx-3">
+    <>
       <div className="fw-bold fs-2 mb-3 primaryColor">Tenant Details</div>
       <Form.Group className="mb-3">
         <Form.Label>Tenant Name</Form.Label>
@@ -31,8 +31,8 @@ function Users() {
         />
       </Form.Group>
       <Button className="w-100 complementryBg border-0 py-2">Save</Button>
-    </div>
+    </>
   );
 }
 
-export default Users;
+export default TenantForm;

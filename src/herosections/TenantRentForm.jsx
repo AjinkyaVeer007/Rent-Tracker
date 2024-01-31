@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Dropdown, Form } from "react-bootstrap";
 
-function UserOnRent() {
+function TenantRentForm() {
   return (
-    <div className="mx-3">
+    <>
       <div className="fw-bold fs-2 mb-3 primaryColor">
         Property-Tenant Connection
       </div>
@@ -64,8 +64,8 @@ function UserOnRent() {
         />
       </Form.Group>
       <Button className="w-100 complementryBg border-0 py-2">Save</Button>
-    </div>
+    </>
   );
 }
 
-export default UserOnRent;
+export default TenantRentForm;
